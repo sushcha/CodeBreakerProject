@@ -15,10 +15,11 @@ function guess() {
           setMessage("SORRY! OUT OF GUESSES!");
           return;
         }
-        console.log("Another Attempt", attempt)
+        //console.log("Another Attempt", attempt)
         getResults(input.value)
     }
     //console.log(answer, attempt)
+    input.value = '';
     if(attempt =='' || answer=='') {
       setHiddenFields(9999);
       //console.log("everything empty")
@@ -35,7 +36,7 @@ function setHiddenFields(max) {
       answer = '0' + answer
     }
   }
-  console.log("New Answer", answer, "Attempts", attempt);
+  //console.log("New Answer", answer, "Attempts", attempt);
 }
 
 var setMessage = function(msg) {
